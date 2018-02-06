@@ -1,6 +1,6 @@
 <?php
 $action=$_REQUEST['action'];
-if ($action=="contact")    
+if ($action=="contact.php")    
     {
     } 
     else               
