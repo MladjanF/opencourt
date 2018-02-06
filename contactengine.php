@@ -6,7 +6,6 @@ $Subject = "Contact Submission";
 $Name = Trim(stripslashes($_POST['Name']));
 $Email = Trim(stripslashes($_POST['Email'])); 
 $Message = Trim(stripslashes($_POST['Message']));
-ini_set("sendmail_from", "mladjanf@gmail.com"); 
 
 // validation
 $validationOK=true;
