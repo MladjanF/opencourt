@@ -3,9 +3,9 @@
 $EmailFrom = "";
 $EmailTo = "mladjanfilipovic@yahoo.co.uk";
 $Subject = "Contact Submission";
-$Name = Trim(stripslashes($_POST['Name']));
-$Email = Trim(stripslashes($_POST['Email'])); 
-$Message = Trim(stripslashes($_POST['Message']));
+$Name = Trim(stripslashes($_GET['Name']));
+$Email = Trim(stripslashes($_GET['Email'])); 
+$Message = Trim(stripslashes($_GET['Message']));
 
 // validation
 $validationOK=true;
