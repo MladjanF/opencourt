@@ -131,24 +131,21 @@
             </section>
 
             <section id="contact" class="contact">
-                <h1>Contact us</h1>              
-                          
-                <form method="POST" name="contactform" action="contact-form-handler.php"> 
-                    <p>
-                    <label for='name'>Your Name:</label> <br>
-                    <input type="text" name="name">
-                    </p>
-                    <p>
-                    <label for='email'>Email Address:</label> <br>
-                    <input type="text" name="email"> <br>
-                    </p>
-                    <p>
-                    <label for='message'>Message:</label> <br>
-                    <textarea name="message"></textarea>
-                    </p>
-                    <input type="submit" value="Submit"><br>
-                </form>
+                <h1>Contact us</h1> 
                 
+                <form action="contact.php" method="post">
+                  <p>
+                    <b>Your Name:</b> <input type="text" name="yourname" /><br />
+                    <b>Subject:</b> <input type="text" name="subject" /><br />
+                    <b>E-mail:</b> <input type="text" name="email" /><br />
+                  </p>                                       
+                  <p><b>Message:</b><br />
+                    <textarea name="comments" rows="10" cols="40"></textarea></p>
+                    
+                    <p><input type="submit" value="Send it!"></p>                  
+                                        
+                </form>                        
+                                
             </section>
         </div>
         
@@ -162,17 +159,7 @@
             </ul>
         </footer>
         
-   <!-- Scripts -->
-   
-   <script language="JavaScript">
-    // Code for validating the form
-    // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
-    // for details
-    var frmvalidator  = new Validator("contactform");
-    frmvalidator.addValidation("name","req","Please provide your name"); 
-    frmvalidator.addValidation("email","req","Please provide your email"); 
-    frmvalidator.addValidation("email","email","Please enter a valid email address"); 
-    </script>
+   <!-- Scripts --> 
         
         <script src="js/jquery-3.3.1.js"></script>
         <script src="js/main.js"></script>
