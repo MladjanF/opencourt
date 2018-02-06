@@ -5,7 +5,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-widht, initial-scale=1">
         <meta name="description" content="We are professional basketball agency!">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
        <title>Open Court Basketball Agency</title>
 
@@ -132,18 +131,23 @@
             </section>
 
             <section id="contact" class="contact">
-                <h1>Contact us</h1>                
-                
-                <form  action="contact.php" method="POST" enctype="multipart/form-data">
-                  <input type="hidden" name="action" value="submit">
-                  Your name:<br>
-                  <input name="name" type="text" value="" size="30"/><br>
-                  Your email:<br>
-                  <input name="email" type="text" value="" size="30"/><br>
-                  Your message:<br>
-                  <textarea name="message" rows="7" cols="30"></textarea><br>
-                  <input type="submit" value="Send email"/>
-                 </form>   
+                <h1>Contact us</h1>              
+                          
+                <form method="POST" name="contactform" action="contact-form-handler.php"> 
+                    <p>
+                    <label for='name'>Your Name:</label> <br>
+                    <input type="text" name="name">
+                    </p>
+                    <p>
+                    <label for='email'>Email Address:</label> <br>
+                    <input type="text" name="email"> <br>
+                    </p>
+                    <p>
+                    <label for='message'>Message:</label> <br>
+                    <textarea name="message"></textarea>
+                    </p>
+                    <input type="submit" value="Submit"><br>
+                </form>
                 
             </section>
         </div>
@@ -159,6 +163,16 @@
         </footer>
         
    <!-- Scripts -->
+   
+   <script language="JavaScript">
+    // Code for validating the form
+    // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+    // for details
+    var frmvalidator  = new Validator("contactform");
+    frmvalidator.addValidation("name","req","Please provide your name"); 
+    frmvalidator.addValidation("email","req","Please provide your email"); 
+    frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+    </script>
         
         <script src="js/jquery-3.3.1.js"></script>
         <script src="js/main.js"></script>
